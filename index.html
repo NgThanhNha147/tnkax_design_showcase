@@ -12,7 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="showcase.css?v=20260820-27">
+  <link rel="stylesheet" href="showcase.css?v=20260820-28">
 </head>
 <body class="page-loading">
   <div class="page-loader" id="page-loader" role="status" aria-label="Đang tải website">
@@ -39,6 +39,13 @@
     <span class="adobe-icon adobe-ps adobe-ps-two">Ps</span>
     <span class="adobe-icon adobe-ae adobe-ae-two">Ae</span>
   </div>
+  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursor-glow" aria-hidden="true"></div>
+  <div class="sakura-canopy" aria-hidden="true">
+    <div class="sakura-branch branch-left"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="sakura-branch branch-right"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+  </div>
+  <div class="petal-field" id="petal-field" aria-hidden="true"></div>
   <header class="simple-header">
     <div class="simple-header-inner shell">
       <a class="simple-logo" href="#top" aria-label="Về đầu trang">tnkax design</a>
@@ -61,11 +68,31 @@
     </section>
   </main>
 
-  <footer><a class="brand" href="#top"><b>tnkax</b><span>design</span></a><p>Kho mẫu thiết kế cá nhân.</p><span>© 2026 tnkax design</span></footer>
+  <footer class="showcase-footer">
+    <div class="footer-glow footer-glow-one"></div>
+    <div class="footer-glow footer-glow-two"></div>
+    <div class="footer-inner shell">
+      <div class="footer-brand">
+        <span class="footer-kicker">DESIGN WITH LOVE ✦</span>
+        <a href="#top">tnkax design</a>
+        <p>Kho mẫu thiết kế xinh xắn dành cho những ý tưởng thật riêng.</p>
+      </div>
+      <div class="footer-contacts">
+        <span>Liên hệ với mình</span>
+        <a class="footer-contact telegram" href="https://t.me/tnkax_design" target="_blank" rel="noopener">
+          <b>Telegram</b><small>@tnkax_design</small><i>↗</i>
+        </a>
+        <a class="footer-contact zalo" href="https://zalo.me/0353748345" target="_blank" rel="noopener">
+          <b>Zalo</b><small>0353748345</small><i>↗</i>
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom shell"><span>© 2026 tnkax design</span><a href="#top">Lên đầu trang ↑</a></div>
+  </footer>
 
   <div class="modal" id="modal" aria-hidden="true"><div class="modal-overlay" data-close></div><div class="modal-box"><button data-close aria-label="Đóng">×</button><img id="modal-image" alt=""><div class="modal-info"><div><small id="modal-category"></small><h3 id="modal-title"></h3><p id="modal-description"></p></div><a href="#top" data-close>Đóng ♡</a></div></div></div>
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="supabase-config.js?v=20260820-3"></script>
-  <script src="script.js?v=20260820-21"></script>
+  <script src="script.js?v=20260820-22"></script>
 </body>
 </html>
