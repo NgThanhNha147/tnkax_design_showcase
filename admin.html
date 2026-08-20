@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="admin.css?v=20260820-9">
+  <link rel="stylesheet" href="admin.css?v=20260820-11">
 </head>
 <body>
   <section id="login" class="login-screen">
@@ -46,10 +46,11 @@
   <dialog id="product-dialog">
     <form id="product-form"><input type="hidden" name="id"><div class="dialog-head"><div><span>TNKAX DESIGN</span><h2 id="form-title">Thêm sản phẩm</h2></div><button type="button" id="cancel" aria-label="Đóng">×</button></div><div class="form-grid"><label class="full">Tên nội bộ <small>Không bắt buộc, tên này không hiển thị ngoài website.</small><input name="title" placeholder="Có thể để trống"></label><label>Danh mục<select name="category" required></select></label><label>Lượt xem<input name="views" type="number" min="0" value="0"></label><label class="full">Mô tả<textarea name="description" rows="3" placeholder="Có thể để trống"></textarea></label><label class="full upload-field">Tải ảnh từ máy<input name="file" type="file" accept="image/*"><small>PNG, JPG, WEBP hoặc GIF</small></label><label class="full">Hoặc URL ảnh<input name="image" placeholder="https://..."></label></div><div class="dialog-actions"><button type="button" class="secondary" id="cancel-bottom">Hủy</button><button type="submit" class="main-button">Lưu sản phẩm</button></div></form>
   </dialog>
+  <dialog id="category-style-dialog"><form id="category-style-form"><input type="hidden" name="category_id"><div class="dialog-head"><div><span>TRANG TRÍ DANH MỤC</span><h2 id="category-style-title">Kiểu tiêu đề</h2></div><button type="button" id="close-category-style" aria-label="Đóng">×</button></div><div class="style-options"><label><input type="radio" name="style" value="default" checked><span><b>Ribbon mặc định</b><small>Dùng khung đỏ và tên danh mục.</small><i class="ribbon-preview">Tên danh mục ♡</i></span></label><label><input type="radio" name="style" value="image"><span><b>Ảnh tùy chỉnh</b><small>PNG, GIF hoặc WEBP đã tách nền.</small><i class="image-preview" id="category-image-preview">Chưa chọn ảnh</i></span></label></div><label class="custom-header-upload">Tải ảnh trang trí<input name="file" type="file" accept="image/png,image/webp,image/gif"><small>Khuyên dùng ảnh ngang, nền trong suốt.</small></label><label class="custom-header-url">Hoặc URL ảnh<input name="image_url" placeholder="https://..."></label><div class="dialog-actions"><button type="button" class="secondary" id="cancel-category-style">Hủy</button><button type="submit" class="main-button">Lưu kiểu hiển thị</button></div></form></dialog>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.6/Sortable.min.js"></script>
   <script src="supabase-config.js?v=20260820-3"></script>
-  <script src="admin.js?v=20260820-9"></script>
+  <script src="admin.js?v=20260820-11"></script>
 </body>
 </html>
