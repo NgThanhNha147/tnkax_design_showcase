@@ -7,7 +7,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="admin.css?v=20260820-4">
+  <link rel="stylesheet" href="admin.css?v=20260820-7">
 </head>
 <body>
   <section id="login" class="login-screen">
@@ -38,7 +38,7 @@
       </div>
 
       <div id="categories-tab" hidden>
-        <section class="content-panel category-panel"><div class="panel-title"><div><h2>Danh mục sản phẩm</h2><p>Tạo nhóm để khách lọc và xem mẫu dễ hơn.</p></div></div><form id="category-form" class="category-form"><input name="name" placeholder="Ví dụ: Thumbnail YouTube" required><button>＋ Thêm danh mục</button></form><div id="admin-categories" class="category-list"></div></section>
+        <section class="content-panel category-panel"><div class="panel-title"><div><h2>Danh mục sản phẩm</h2><p>Kéo thả để thay đổi mức độ ưu tiên hiển thị ngoài website.</p></div><button id="save-category-order" class="save-order" hidden>✓ Lưu thứ tự</button></div><form id="category-form" class="category-form"><input name="name" placeholder="Ví dụ: Thumbnail YouTube" required><button>＋ Thêm danh mục</button></form><div class="sort-hint">☷ Giữ biểu tượng bên trái rồi kéo danh mục đến vị trí mong muốn.</div><div id="admin-categories" class="category-list"></div></section>
       </div>
     </section>
   </main>
@@ -48,7 +48,8 @@
   </dialog>
 
   <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.6/Sortable.min.js"></script>
   <script src="supabase-config.js?v=20260820-3"></script>
-  <script src="admin.js?v=20260820-4"></script>
+  <script src="admin.js?v=20260820-7"></script>
 </body>
 </html>
