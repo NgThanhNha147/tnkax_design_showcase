@@ -69,9 +69,6 @@ body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opa
 .simple-contact::after{content:"";position:absolute;inset:-60% auto -60% -45%;width:35%;background:#fff9;rotate:18deg;animation:button-shine 3.2s ease-in-out infinite}
 @keyframes button-shine{45%,100%{left:125%}}
 .banner-image,.pricing{isolation:isolate;position:relative;transition:transform .5s cubic-bezier(.2,.8,.2,1),filter .5s}
-.banner-image::after,.pricing::after{content:"";position:absolute;inset:-100% auto -100% -35%;z-index:2;width:17%;pointer-events:none;background:linear-gradient(90deg,transparent,#fff8,transparent);rotate:14deg;animation:wide-shimmer 6s ease-in-out infinite}
-.pricing::after{animation-delay:-3s}
-@keyframes wide-shimmer{40%,100%{left:130%}}
 .banner-image:hover,.pricing:hover{transform:translateY(-4px) scale(1.006);filter:saturate(1.06)}
 .filter-tabs{position:sticky;top:74px;z-index:25;padding:9px;border-radius:40px;background:#ffffffa8;backdrop-filter:blur(12px);box-shadow:0 8px 28px #a5365d18}
 .filter-tabs button{position:relative;overflow:hidden;transition:transform .2s,box-shadow .2s,background .2s}
@@ -112,4 +109,4 @@ body::before{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;opa
 .footer-bottom a{font-weight:700;transition:translate .2s}.footer-bottom a:hover{translate:0 -3px}
 
 @media(max-width:620px){.cursor-glow,.cursor-sparkle{display:none}.falling-petal{opacity:.58}.filter-tabs{top:63px;border-radius:22px;padding:6px}.banner-image:hover,.pricing:hover{transform:none}.thumb::after{display:none}.footer-inner{padding-block:35px 25px}.footer-contact{grid-template-columns:78px 1fr auto;padding:12px}.footer-bottom{min-height:60px}.reveal-item{translate:0 20px}}
-@media(prefers-reduced-motion:reduce){.falling-petal,.simple-logo,.simple-contact::after,.banner-image::after,.pricing::after,.category-custom-header img,.category-ribbon,.footer-glow{animation:none}.reveal-item{opacity:1;translate:0;scale:1;transition:none}.product-card{transform:none!important}}
+@media(prefers-reduced-motion:reduce){.falling-petal,.simple-logo,.simple-contact::after,.category-custom-header img,.category-ribbon,.footer-glow{animation:none}.reveal-item{opacity:1;translate:0;scale:1;transition:none}.product-card{transform:none!important}}
