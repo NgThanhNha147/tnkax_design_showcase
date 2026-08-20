@@ -32,7 +32,7 @@ const revealObserver="IntersectionObserver" in window?new IntersectionObserver(e
   entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add("is-revealed");revealObserver.unobserve(entry.target)}});
 },{threshold:.08,rootMargin:"0px 0px -30px"}):null;
 function observeReveals(root=document){
-  root.querySelectorAll(".banner-image,.pricing,.category-block,.footer-brand,.footer-contacts").forEach(element=>{
+  root.querySelectorAll(".banner-image,.pricing,.category-block,.footer-contacts").forEach(element=>{
     if(element.dataset.revealReady)return;
     element.dataset.revealReady="true";
     element.classList.add("reveal-item");
