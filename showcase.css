@@ -8,3 +8,4 @@
 .category-block .section-toggle.is-collapse{width:180px;height:auto;padding:0;border:0;background:transparent;box-shadow:none}@media(max-width:620px){.category-block .section-toggle.is-collapse{width:150px}}
 .pricing{padding:24px 10px 12px;display:flex;justify-content:center}.pricing img{width:min(1080px,100%);height:auto;object-fit:contain;filter:drop-shadow(0 10px 10px #7c2a4a20)}@media(max-width:620px){.pricing{padding:17px 0 5px}.pricing img{width:100%}}
 .pricing{padding-bottom:0}.portfolio{padding-top:14px}.filter-tabs{margin:8px 0 18px}@media(max-width:620px){.pricing{padding-top:8px;padding-bottom:0}.portfolio{padding-top:6px}.filter-tabs{margin:4px 0 12px}}
+.banner-image{margin-top:10px;overflow:hidden;border-radius:13px;border:3px solid #fff;box-shadow:0 8px 25px #8e292024}.banner-image img{display:block;width:100%;height:auto}@media(max-width:620px){.banner-image{width:100%;margin-top:0;border-width:0;border-radius:0}}
