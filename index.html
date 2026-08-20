@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Kho mẫu thiết kế của tnkax design">
+  <title>tnkax design - Kho mẫu thiết kế</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="showcase.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#top"><b>tnkax</b><span>design</span></a>
+      <nav><a href="#top">Trang chủ</a><a href="#portfolio">Kho mẫu</a><a href="#contact">Liên hệ</a></nav>
+      <a class="header-contact" href="#contact">Liên hệ mình ♡</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="banner shell">
+      <div class="banner-copy"><span>TNKAX DESIGN • PORTFOLIO</span><h1>Biến ý tưởng thành<br><em>mẫu thiết kế xinh</em></h1><p>Ảnh bìa, banner shop, ảnh dịch vụ, logo và nhiều mẫu khác.</p><a href="#portfolio">Xem mẫu ngay ↓</a></div>
+      <div class="banner-art"><div class="screen screen-back">YOUR<br>IDEA</div><div class="screen screen-front">MADE<br>WITH ♡</div><img class="deco-heart" src="assets/stickers/heart-small.png" alt=""><img class="deco-star" src="assets/stickers/star-large.png" alt=""><img class="deco-bow" src="assets/stickers/bow.png" alt=""></div>
+    </section>
+
+    <section class="partner shell">
+      <div class="partner-title"><small>TNKAX DESIGN</small><h2>Admin & Đối tác</h2></div>
+      <div class="partner-list">
+        <article><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=160&q=80" alt="Admin"><span>tnkax design</span></article>
+        <article><img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&w=160&q=80" alt="Đối tác"><span>Đối tác</span></article>
+        <article><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=160&q=80" alt="Đối tác"><span>Creator</span></article>
+        <article><div class="more-avatar">+</div><span>Kết nối</span></article>
+      </div>
+    </section>
+
+    <section class="services shell">
+      <div class="mini-heading"><span>☰</span><b>Dịch vụ nhanh</b></div>
+      <div class="service-grid">
+        <a href="#portfolio" data-jump="Ảnh bìa"><i>▣</i><b>Ảnh bìa</b><small>Facebook, Group</small></a>
+        <a href="#portfolio" data-jump="Dịch vụ"><i>✦</i><b>Ảnh dịch vụ</b><small>Social Media</small></a>
+        <a href="#portfolio" data-jump="Banner Shop"><i>▤</i><b>Banner Shop</b><small>Quảng cáo shop</small></a>
+        <a href="#contact"><i>♡</i><b>Liên hệ</b><small>Đặt thiết kế</small></a>
+      </div>
+    </section>
+
+    <section class="portfolio shell" id="portfolio">
+      <div class="portfolio-head"><span>Kho mẫu của tnkax</span><h2>Chọn mẫu bạn thích</h2><p>Lọc nhanh theo danh mục hoặc xem từng bộ sưu tập bên dưới.</p></div>
+      <div class="filter-tabs" id="filters"></div>
+      <div id="category-sections"></div>
+      <div id="empty" class="empty" hidden>Danh mục này chưa có sản phẩm.</div>
+    </section>
+
+    <section class="contact" id="contact">
+      <img src="assets/stickers/bow.png" alt="" class="contact-bow">
+      <span>Thích một mẫu nào đó?</span><h2>Nhắn mình để làm<br>một mẫu riêng nhé!</h2>
+      <div><a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook ♡</a><a href="mailto:hello@tnkax.design">Email ✦</a></div>
+      <p>Khách xem không cần đăng ký hoặc đăng nhập.</p>
+    </section>
+  </main>
+
+  <footer><a class="brand" href="#top"><b>tnkax</b><span>design</span></a><p>Kho mẫu thiết kế cá nhân.</p><span>© 2026 tnkax design</span></footer>
+
+  <div class="modal" id="modal" aria-hidden="true"><div class="modal-overlay" data-close></div><div class="modal-box"><button data-close aria-label="Đóng">×</button><img id="modal-image" alt=""><div class="modal-info"><div><small id="modal-category"></small><h3 id="modal-title"></h3><p id="modal-description"></p></div><a href="#contact" data-close>Liên hệ làm mẫu này ♡</a></div></div></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-config.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
