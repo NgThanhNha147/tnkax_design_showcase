@@ -26,14 +26,9 @@
 .page-loader .wrapper .letter9{animation-delay:calc(2.5s / 10 * (10 - 9) * -1)}
 .page-loader .wrapper .letter10{animation-delay:calc(2.5s / 10 * (10 - 10) * -1)}
 
-.simple-header{height:62px;display:flex;align-items:center;justify-content:center;position:relative;z-index:35;background:linear-gradient(90deg,#fff8f4,#ffe9f1 48%,#fff8f4);border-bottom:1px solid #f8bfd2;box-shadow:0 5px 18px #a92b5b12}
-.simple-header::before,.simple-header::after{content:"";position:absolute;top:50%;width:min(30vw,260px);height:1px;background:linear-gradient(90deg,transparent,#efa2bd)}
-.simple-header::before{left:4%}
-.simple-header::after{right:4%;transform:scaleX(-1)}
-.simple-logo{position:relative;z-index:1;display:flex;align-items:center;gap:9px;padding:8px 20px;color:#d62d70;font-family:var(--cute);font-size:clamp(20px,2.5vw,28px);line-height:1;letter-spacing:.015em;text-shadow:0 2px 0 #fff;transition:transform .2s ease}
-.simple-logo:hover{transform:translateY(-2px)}
-.simple-logo strong{font-weight:800}
-.logo-spark{font-size:.55em;color:#f59bbb;animation:logo-twinkle 1.8s ease-in-out infinite}
-.logo-heart{font-size:.75em;color:#ef699a;transform:rotate(8deg)}
-@keyframes logo-twinkle{50%{transform:rotate(25deg) scale(1.25);opacity:.65}}
-@media(max-width:620px){.simple-header{height:54px}.simple-header::before,.simple-header::after{width:15vw}.simple-logo{font-size:20px;padding-inline:12px}}
+.simple-header{height:64px;position:relative;z-index:35;background:#fff;border-bottom:1px solid #f2dfe6;box-shadow:0 3px 14px #8030480d}
+.simple-header-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}
+.simple-logo{color:#d62d70;font:800 clamp(21px,2.4vw,27px)/1 var(--cute);letter-spacing:-.02em}
+.simple-contact{display:inline-flex;align-items:center;justify-content:center;padding:10px 17px;border-radius:8px;background:#e94f8b;color:#fff;font-size:11px;font-weight:700;box-shadow:0 3px 0 #bd2863;transition:transform .2s,background .2s}
+.simple-contact:hover{background:#d93678;transform:translateY(-1px)}
+@media(max-width:620px){.simple-header{height:56px}.simple-header-inner{width:calc(100% - 24px)}.simple-logo{font-size:20px}.simple-contact{padding:9px 13px;font-size:10px}}
