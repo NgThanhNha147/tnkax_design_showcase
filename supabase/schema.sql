@@ -21,19 +21,32 @@ create table if not exists public.products (
 alter table public.categories enable row level security;
 alter table public.products enable row level security;
 
+create or replace function public.is_tnkax_admin()
+returns boolean language sql stable security definer set search_path = public as $$
+  select coalesce(auth.jwt() ->> 'email', '') = 'admin@gmail.com';
+$$;
+
+drop policy if exists "Public can read categories" on public.categories;
+drop policy if exists "Public can read products" on public.products;
+drop policy if exists "Admin manages categories" on public.categories;
+drop policy if exists "Admin manages products" on public.products;
 create policy "Public can read categories" on public.categories for select using (true);
 create policy "Public can read products" on public.products for select using (true);
-create policy "Admin manages categories" on public.categories for all to authenticated using (true) with check (true);
-create policy "Admin manages products" on public.products for all to authenticated using (true) with check (true);
+create policy "Admin manages categories" on public.categories for all to authenticated using (public.is_tnkax_admin()) with check (public.is_tnkax_admin());
+create policy "Admin manages products" on public.products for all to authenticated using (public.is_tnkax_admin()) with check (public.is_tnkax_admin());
 
 insert into storage.buckets (id, name, public)
 values ('product-images', 'product-images', true)
 on conflict (id) do update set public = true;
 
+drop policy if exists "Public can view product images" on storage.objects;
+drop policy if exists "Admin uploads product images" on storage.objects;
+drop policy if exists "Admin updates product images" on storage.objects;
+drop policy if exists "Admin deletes product images" on storage.objects;
 create policy "Public can view product images" on storage.objects for select using (bucket_id = 'product-images');
-create policy "Admin uploads product images" on storage.objects for insert to authenticated with check (bucket_id = 'product-images');
-create policy "Admin updates product images" on storage.objects for update to authenticated using (bucket_id = 'product-images') with check (bucket_id = 'product-images');
-create policy "Admin deletes product images" on storage.objects for delete to authenticated using (bucket_id = 'product-images');
+create policy "Admin uploads product images" on storage.objects for insert to authenticated with check (bucket_id = 'product-images' and public.is_tnkax_admin());
+create policy "Admin updates product images" on storage.objects for update to authenticated using (bucket_id = 'product-images' and public.is_tnkax_admin()) with check (bucket_id = 'product-images' and public.is_tnkax_admin());
+create policy "Admin deletes product images" on storage.objects for delete to authenticated using (bucket_id = 'product-images' and public.is_tnkax_admin());
 
 create or replace function public.increment_product_views(product_id uuid)
 returns void language sql security definer set search_path = public as $$
