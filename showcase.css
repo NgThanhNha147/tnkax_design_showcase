@@ -25,25 +25,3 @@
 .page-loader .wrapper .letter8{animation-delay:calc(2.5s / 10 * (10 - 8) * -1)}
 .page-loader .wrapper .letter9{animation-delay:calc(2.5s / 10 * (10 - 9) * -1)}
 .page-loader .wrapper .letter10{animation-delay:calc(2.5s / 10 * (10 - 10) * -1)}
-
-/* Contact dropdown adapted from Uiverse.io by Zain-Muhammad. */
-.showcase-header{position:sticky;top:0;z-index:40;height:70px;background:linear-gradient(90deg,#fff4f8,#ffd8e8 52%,#ffc5dc);border-bottom:2px solid #fff;box-shadow:0 6px 20px #c7357130}
-.showcase-header-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.pixel-brand{width:min(420px,60vw);overflow:hidden;color:#d72c72;font-family:"Press Start 2P",monospace;font-size:clamp(12px,1.55vw,18px);line-height:1;white-space:nowrap;text-shadow:2px 2px 0 #fff,4px 4px 0 #f6a8c7}
-.pixel-brand span{display:inline-block;padding:8px 0;animation:pixel-brand-move 3.2s ease-in-out infinite alternate}
-@keyframes pixel-brand-move{from{transform:translateX(0)}to{transform:translateX(22px)}}
-.tooltip-wrapper{--clr-btn:#e94f8b;--clr-dropdown:#fff0f6;--clr-nav-hover:#cf286c;--clr-dropdown-link-hov:#ffd2e3;--clr-light:#fff}
-.tooltip-wrapper .tooltip-container,.tooltip-wrapper .tooltip-menu-with-icon{list-style:none;margin:0;padding:0}
-.tooltip-wrapper>.tooltip-container{display:flex;justify-content:space-around;align-items:center}
-.tooltip-wrapper .nav-link{position:relative}
-.tooltip-wrapper .tooltip-tab{color:var(--clr-light);background:linear-gradient(135deg,#ff75a9,var(--clr-btn));padding:.78rem 1rem;letter-spacing:1px;font-size:.75rem;font-weight:700;display:flex;align-items:center;column-gap:10px;justify-content:space-between;text-transform:uppercase;cursor:pointer;border:2px solid #fff;border-radius:10px;box-shadow:0 4px 0 #b92260;transition:.3s ease-in-out}
-.tooltip-wrapper .tooltip-tab svg{width:18px;height:18px;fill:#fff;transition:.3s ease-in-out}
-.tooltip-wrapper .tooltip{position:absolute;top:100%;right:0;min-width:12rem;transform:translateY(10px);opacity:0;visibility:hidden;pointer-events:none;transition:.3s;padding-top:15px}
-.tooltip-wrapper .tooltip::after{content:"";width:15px;height:15px;background:#f0649b;top:1px;right:18px;position:absolute;clip-path:polygon(50% 0,0 100%,100% 100%)}
-.tooltip-wrapper .tooltip-menu-with-icon{padding:8px;background:var(--clr-dropdown);border:2px solid #f0649b;border-radius:12px;box-shadow:0 8px 25px #a81f5740}
-.tooltip-wrapper .tooltip-link>a{display:flex;align-items:center;color:#a91f59;padding:.7rem .8rem;border-radius:7px;font-size:.75rem;font-weight:700;transition:.2s}
-.tooltip-wrapper .tooltip-link>a:hover{background:var(--clr-dropdown-link-hov);color:#d3266d;transform:translateX(4px)}
-.tooltip-wrapper .nav-link:hover>.tooltip-tab,.tooltip-wrapper .nav-link:focus-within>.tooltip-tab{background:var(--clr-nav-hover)}
-.tooltip-wrapper .nav-link:hover>.tooltip-tab svg,.tooltip-wrapper .nav-link:focus-within>.tooltip-tab svg{transform:rotate(360deg)}
-.tooltip-wrapper .nav-link:hover>.tooltip,.tooltip-wrapper .nav-link:focus-within>.tooltip{transform:translateY(0);opacity:1;visibility:visible;pointer-events:auto}
-@media(max-width:620px){.showcase-header{height:60px}.showcase-header-inner{width:calc(100% - 20px)}.pixel-brand{width:58vw;font-size:10px}.tooltip-wrapper .tooltip-tab{padding:.65rem .75rem;font-size:.65rem}.tooltip-wrapper .tooltip{min-width:10.5rem}}
