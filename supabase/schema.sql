@@ -15,8 +15,11 @@ create table if not exists public.products (
   description text default '',
   image_url text not null,
   views integer not null default 0 check (views >= 0),
+  sort_order integer not null default 0,
   created_at timestamptz not null default now()
 );
+
+alter table public.products add column if not exists sort_order integer not null default 0;
 
 alter table public.categories enable row level security;
 alter table public.products enable row level security;
